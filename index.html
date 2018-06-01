@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json2csv</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+<head>
+<body>
+<h1>Convert JSON to CSV</h1>
+
+<div class="json">
+
+    <p>
+    <span class="instruction editing">
+      Paste your JSON below.
+    </span>
+
+        <span class="instruction rendered">
+      Click your JSON below to edit.
+    </span>
+    </p>
+
+    <div class="areas">
+    <textarea id="data" class="editing"></textarea>
+        <pre class="rendered"><code></code></pre>
+        <div class="drop" style="display: none;">DROP JSON HERE</div>
+
+    </div>
+    <button id="change" class="checkout" onclick="changeToCsv()" >Change to CSV</button>
+    <p>or</p>
+    <input type="file" id="uploadme" accept=".json"/>
+    <input type="button" class="checkout" id="clickme" value="Upload Stuff!" />
+    <div id="error" class="error">
+        There was an error parsing this JSON. If you're sure this JSON is valid, please Try again
+    </div>
+</div>
+
+<section class="csv">
+
+    <p>
+    <span class="rendered">
+      Below are the first few rows (<span class="rows count"></span> total).
+
+      <a download="result.csv" href="#" class="download">
+        Download the entire CSV</a>,
+
+        <span class="show-render-all">
+          <a href="#" class="render-all">show all <span class="rows count"></span> rows</a>,
+        </span>
+
+      or <a href="#" class="raw">show the raw data</a>.
+    </span>
+
+        <span class="editing">
+      Your JSON will appear below as a table.
+    </span>
+    </p>
+
+    <div class="areas">
+    <textarea id="result" class="editing" readonly="readonly"></textarea>
+        <div class="table rendered">
+            <table></table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+       Made by Mary Maher
+    </p>
+</footer>
+<script src="assests/bundle.js"></script>
+
+</body>
+</html>
