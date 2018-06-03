@@ -28,6 +28,12 @@ function data_to_csv(data) {
         //console.log(csv);
         document.getElementById('result').value=csv;
         document.getElementById('error').style.display='none';
+            let link = document.createElement('a')
+            link.id = 'download-csv'
+            link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(csv));
+            link.setAttribute('download', 'yourfiletextgoeshere.csv');
+            document.body.appendChild(link)
+            document.querySelector('#download-csv').click()
         });
     }
     catch (e) {
