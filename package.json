@@ -2,7 +2,7 @@
   "name": "json2csv",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "home.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserify":"browserify index.js -o assests/bundle.js"
