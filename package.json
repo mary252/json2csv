@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browserify":"browserify index.js -o assests/bundle.js",
-    "start":"node index.js"
+    "browserify": "browserify index.js -o assests/bundle.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/mary252/json2csv#readme",
   "dependencies": {
     "browserify": "^16.2.2",
+    "express": "^4.16.3",
     "jsonexport": "^2.1.0"
   },
   "devDependencies": {
